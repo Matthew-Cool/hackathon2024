@@ -13,10 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return const CupertinoApp(
-      // Providing a restorationScopeId allows the Navigator built by the
-      // MaterialApp to restore the navigation stack when a user leaves and
-      // returns to the app after it has been killed while running in the
-      // background.
+
       restorationScopeId: 'app', //prob don't need this, we can delete if it doesn't behave :
 
       // Provide the generated AppLocalizations to the MaterialApp. This
