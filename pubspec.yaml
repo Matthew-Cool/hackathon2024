@@ -1,4 +1,4 @@
-name: flutter_application_1_test
+name: hackathon_app
 description: "A new Flutter project."
 
 # Prevent accidental publishing to pub.dev.
@@ -14,12 +14,14 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  cupertino_icons: ^1.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^3.0.0
+  flutter_launcher_icons: "^0.13.1"
 
 flutter:
   uses-material-design: true
@@ -30,3 +32,8 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
+
+flutter_launcher_icons:
+  andriod: "launcher_icon"
+  ios: ture
+  image_path: "assets/images/flutter_logo.png"
