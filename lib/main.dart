@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'app.dart';
 
 
@@ -13,3 +12,4 @@ void main() async {
   // SettingsView.
   runApp(const MyApp()); //lets actually start the app, go to app.dart
 }
+
