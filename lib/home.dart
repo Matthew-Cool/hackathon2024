@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/Custom%20Widgets/caloriebar.dart';
 import 'package:hackathon_app/Custom%20Widgets/progress.dart';
+import 'package:hackathon_app/main.dart';
 import 'package:hackathon_app/page5.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
@@ -20,6 +21,10 @@ class _Page2State extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    int cal;
+    int goal;
+    cal = g_calorie.toInt();
+    goal = g_goal.toInt();
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: Container(
@@ -44,8 +49,9 @@ class _Page2State extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(padding: EdgeInsets.only(top: 160), child: ProgressBar()),
-            Container(padding: EdgeInsets.only(top: 120) ,child: Text(style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),"Welcome, $savedName")),
+            Container(padding: EdgeInsets.only(top: 90), child: ProgressBar()),
+            Container(padding: EdgeInsets.only(top: 20), child: Text(style: const TextStyle(fontSize: 15), "$cal / $goal")),
+            Container(padding: EdgeInsets.only(top: 80) ,child: Text(style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),"Welcome, $savedName")),
             const CalorieBar(),
             
           ],

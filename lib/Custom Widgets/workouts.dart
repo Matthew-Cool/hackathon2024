@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hackathon_app/food.dart';
+import 'package:hackathon_app/main.dart';
 
 class Workout extends StatefulWidget {
   const Workout({super.key, required this.name, required this.estimatedCalBurned});
@@ -18,7 +19,8 @@ class _WorkoutState extends State<Workout> {
   Widget build(BuildContext context) {
     return CupertinoButton(
       padding: const EdgeInsets.all(5),
-      onPressed: () => setState(() => _isExpanded = !_isExpanded),
+      onPressed: () {g_calorie -= widget.estimatedCalBurned;
+      setState(() => _isExpanded = !_isExpanded);},
       child: Container(
         padding: const EdgeInsets.all(5),
         width: 400,
