@@ -49,7 +49,7 @@ class _Page2State extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(padding: EdgeInsets.only(top: 90), child: ProgressBar()),
+            Container(padding: EdgeInsets.only(top: 120), child: ProgressBar()),
             Container(padding: EdgeInsets.only(top: 20), child: Text(style: const TextStyle(fontSize: 15), "$cal / $goal")),
             Container(padding: EdgeInsets.only(top: 80) ,child: Text(style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),"Welcome, $savedName")),
             const CalorieBar(),
