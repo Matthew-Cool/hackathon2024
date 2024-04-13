@@ -39,7 +39,7 @@ class _WorkoutState extends State<Workout> {
     return Text(
     style: const TextStyle(
       fontWeight: FontWeight.w600,
-      fontSize: 20, color: Color.fromARGB(255, 255, 255, 255)),
+      fontSize: 20, color: Color.fromARGB(255, 0, 0, 0)),
     widget.name);
   }
 
@@ -50,12 +50,12 @@ class _WorkoutState extends State<Workout> {
         Text(
           style: const TextStyle(
             fontWeight: FontWeight.w600,
-            fontSize: 20, color: Color.fromARGB(255, 255, 255, 255)),
+            fontSize: 20, color: Color.fromARGB(255, 0, 0, 0)),
           widget.name
         ),
         const SizedBox(height: 20),
         Text('${widget.estimatedCalBurned} Estimated Calories Burned', style: const TextStyle(
-            fontSize: 15, color: Color.fromARGB(255, 255, 255, 255)),)
+            fontSize: 15, color: Color.fromARGB(255, 0, 0, 0)),)
       ],
     );
   }
