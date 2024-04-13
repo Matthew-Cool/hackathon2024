@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hackathon_app/page1.dart';
 import 'package:hackathon_app/page2.dart';
+import 'package:hackathon_app/page3.dart';
 
 class PageScaffoldCustom extends StatelessWidget {
   const PageScaffoldCustom({Key? key}) : super(key: key);
@@ -17,14 +18,21 @@ class PageScaffoldCustom extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.macwindow),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.arrow_left_circle_fill),
           )
         ],
       ),
       tabBuilder: (context, index) {
         if (index == 0) {
-          return Page1();
-        } else {
+          return CupertinoTabView(builder: (context) => Page1());
+        } else if (index == 1) {
           return Page2();
+        } else {
+          return CupertinoTabView(
+            builder: (context) => Page3(),
+          );
         }
       },
     );
