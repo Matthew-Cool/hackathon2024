@@ -14,20 +14,21 @@ class _FoodItemState extends State<FoodItem> {
   @override
   Widget build(BuildContext context) {
     return CupertinoButton(
+      padding: const EdgeInsets.all(5),
       onPressed: () {},
       child: Container(
-        padding: EdgeInsets.all(4),
+        padding: const EdgeInsets.all(5),
         width: 400,
         height: 50,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(
+            borderRadius: const BorderRadius.all(
               Radius.circular(10),
             ),
             border: Border.all(width: 5),
-            color: Color.fromARGB(217, 230, 154, 40)),
-        margin: EdgeInsets.all(5),
+            color: const Color.fromARGB(217, 230, 154, 40)),
+        //margin: const EdgeInsets.all(),
         child: Text(
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 20, color: Color.fromARGB(255, 0, 0, 0)),
             widget.food),
       ),

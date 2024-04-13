@@ -11,7 +11,8 @@ class _CalorieBarState extends State<CalorieBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(20),
+      
+      //margin: const EdgeInsets.all(10),
       width: 350,
       height: 40,
       decoration: BoxDecoration(
