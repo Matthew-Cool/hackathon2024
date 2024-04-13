@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_app/main.dart';
 
 
 
@@ -27,43 +28,53 @@ class _AwardsState extends State<Awards> {
   }
 }
 
-String getMedal(String category, double cal) {
+void getPoints(bool day, int points) {
+  if ((day == true) && (points < 10)) {
+    g_totalPoints++;
+  }
+  else {
+    g_totalPoints = 0;
+  }  
+}
+
+
+String getMedal() {
   
   int increment = 200;
 
   String medal = "undefined";
 
-  if(cal > (1 * increment)) {
+  if(g_totalPoints > (1 * increment)) {
     medal = "assets/images/BRONZEMedal.png";
   }
-  else if(cal > (2 * increment)) {
+  else if(g_totalPoints > (2 * increment)) {
     medal = "assets/images/BRONZEMedal.png";
   }
-  else if(cal > (3 * increment)) {
+  else if(g_totalPoints > (3 * increment)) {
     medal = "assets/images/BRONZEMedal.png";
   }
-  else if(cal > (4 * increment)) {
+  else if(g_totalPoints > (4 * increment)) {
     medal = "assets/images/SILVERMedal.png";
   }
-  else if(cal > (5 * increment)) {
+  else if(g_totalPoints > (5 * increment)) {
     medal = "assets/images/SILVERMedal.png";
   }
-  else if(cal > (6 * increment)) {
+  else if(g_totalPoints > (6 * increment)) {
     medal = "assets/images/SILVERMedal.png";
   }
-  else if(cal > (7 * increment)) {
+  else if(g_totalPoints > (7 * increment)) {
     medal = "assets/images/GOLDMedal.png";
   }
-  else if(cal > (8 * increment)) {
+  else if(g_totalPoints > (8 * increment)) {
     medal = "assets/images/GOLDMedal.png";
   }
-  else if(cal > (9 * increment)) {
+  else if(g_totalPoints > (9 * increment)) {
     medal = "assets/images/GOLDMedal.png";
   }
-  else if(cal > (10 * increment)) {
+  else if(g_totalPoints > (10 * increment)) {
     medal = "assets/images/PLATINUMMedal.png";
     int num = 0;
-    for(int i = 1; cal > 100; i++){
+    for(int i = 1; g_totalPoints > 70; i++) {
       num++;
       medal = medal + num.toString();
     }
@@ -73,21 +84,5 @@ String getMedal(String category, double cal) {
 }
 
 
-/*
-Award types: Num Calories Tracked, weight lost/gained?, Streaks, 
-Award Levels: Bronze 1-3, Silver 1-3, Gold 1-3, Platinum 1+, 
-
-Num Calories Tracked
-Bronze: 
-
-Weight Lost
-Each level 5lbs.
-
-Weight Gained *if applicable?
-
-Streaks
-Each level 1 week
-
-*/
 
 
