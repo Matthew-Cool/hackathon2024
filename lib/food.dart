@@ -98,6 +98,7 @@ class _FoodState extends State<Food> {
               onPressed: () {
                 double customCal = double.tryParse(customCalController.text) ?? 0.0;
                 g_calorie += customCal;
+                g_gained += customCal;
                 customCalController.clear();
                 Navigator.pop(context); // Dismiss the dialog
               },
