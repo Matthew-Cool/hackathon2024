@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:hackathon_app/food.dart';
 import 'package:hackathon_app/home.dart';
 import 'package:hackathon_app/page3.dart';
+
 
 class PageScaffoldCustom extends StatelessWidget {
   const PageScaffoldCustom({Key? key}) : super(key: key);
@@ -15,7 +17,8 @@ class PageScaffoldCustom extends StatelessWidget {
         items: const [
           BottomNavigationBarItem(
             label: "Food",
-            icon: Icon(CupertinoIcons.circle),
+            icon: Icon(Icons.restaurant,
+),
           ),
           BottomNavigationBarItem(
             label: "Home",
@@ -23,7 +26,8 @@ class PageScaffoldCustom extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             label: "Fitness",
-            icon: Icon(CupertinoIcons.circle),
+            icon: Icon(Icons.fitness_center,
+          ),
           )
         ],
       ),
