@@ -43,7 +43,7 @@ class _ProgressBarState extends State<ProgressBar> {
        percent: deci_val,
        radius: 120.0,
        lineWidth: 30.0,
-       center: Text(style: TextStyle(fontSize: 30.0, color: limit_color ? Color.fromARGB(255, 242, 5, 5) : Color.fromARGB(255, 246, 243, 243)),"$per_val%"),
+       center: Text(style: TextStyle(fontSize: 30.0, color: limit_color ? Color.fromARGB(255, 242, 5, 5) : Color.fromARGB(255, 246, 243, 243)),"${per_val.toStringAsFixed(2)}%"),
        progressColor: limit_color ? Color.fromARGB(241, 242, 5, 5) : Color.fromARGB(240, 10, 219, 212),
        );
   }

@@ -14,7 +14,7 @@ class FoodItem extends StatefulWidget {
 }
 
 class _FoodItemState extends State<FoodItem> {  
-  bool _isExpanded = false;
+  //bool _isExpanded = false;
   
   @override
   Widget build(BuildContext context) {
@@ -22,12 +22,12 @@ class _FoodItemState extends State<FoodItem> {
       padding: const EdgeInsets.all(5),
       onPressed: () {
         g_calorie += widget.calories;
-        setState(() => _isExpanded = !_isExpanded);
+        //setState(() => _isExpanded = !_isExpanded);
       },
       child: Container(
         padding: const EdgeInsets.all(5),
         width: 400,
-        height: _isExpanded ? 85 : 50,
+        height: 85,
         decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(
               Radius.circular(10),
@@ -35,7 +35,7 @@ class _FoodItemState extends State<FoodItem> {
             border: Border.all(width: 5),
             color: Color.fromARGB(217, 121, 209, 96)),
         //margin: const EdgeInsets.all(),
-        child: _isExpanded ? allTheInfo() : onlyTitle(),
+        child: allTheInfo(),
       ),
     );
   }
