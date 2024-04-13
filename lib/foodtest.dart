@@ -8,6 +8,7 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CupertinoPageScaffold(
+      
       navigationBar:
           CupertinoNavigationBar(), //nav bar at the top of screen
       child: Center(
