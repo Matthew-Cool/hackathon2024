@@ -34,8 +34,7 @@ class _Page2State extends State<Home> {
           ),
         ),
         trailing: CupertinoButton(
-            child: const Image(height: 100, width: 50, fit: BoxFit.fill,
-              image: AssetImage('assets/images/RIBBONIcon.png'),),
+            child: Icon(CupertinoIcons.star_fill),
             onPressed: () {
               Navigator.push(
                 context,
