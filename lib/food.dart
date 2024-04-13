@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hackathon_app/Custom%20Widgets/foodItem.dart';
 import 'package:hackathon_app/foodtips.dart';
+import 'package:hackathon_app/main.dart';
 
 class Food extends StatefulWidget {
   const Food({
@@ -13,11 +14,18 @@ class Food extends StatefulWidget {
 
 class _FoodState extends State<Food> {
   String searchText = '';
+  TextEditingController customCalController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
+        leading: CupertinoButton(
+          child: const Icon(CupertinoIcons.add),
+          onPressed: () {
+            showCustomCalDialog(context);
+          },
+        ),
         middle: Container(
           padding: const EdgeInsets.all(5),
           child: const Image(
@@ -25,16 +33,15 @@ class _FoodState extends State<Food> {
           ),
         ),
         trailing: CupertinoButton(
-        child: const Icon(CupertinoIcons.list_number),
-        onPressed: () {
-          Navigator.push(
-            context,
-            CupertinoPageRoute(
-              builder: (context) => const Page4(),
-            ),
-          );
-        },
-        
+          child: const Icon(CupertinoIcons.list_number),
+          onPressed: () {
+            Navigator.push(
+              context,
+              CupertinoPageRoute(
+                builder: (context) => const Page4(),
+              ),
+            );
+          },
         ),
       ), //nav bar at the top of screen
       child: Center(
@@ -66,7 +73,39 @@ class _FoodState extends State<Food> {
             //SizedBox(height: 35,),
           ],
         ),
-      )
+      ),
+    );
+  }
+
+  Future<void> showCustomCalDialog(BuildContext context) async {
+    return showCupertinoDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return CupertinoAlertDialog(
+          title: const Text('Add Custom Amount of Calories'),
+          content: Column(
+            children: [
+              const Text('Enter the calorie amount:'),
+              CupertinoTextField(
+                controller: customCalController,
+                keyboardType: TextInputType.numberWithOptions(decimal: true),
+                decoration: BoxDecoration(color: CupertinoColors.systemGrey)
+              ),
+            ],
+          ),
+          actions: <Widget>[
+            CupertinoButton(
+              onPressed: () {
+                double customCal = double.tryParse(customCalController.text) ?? 0.0;
+                g_calorie += customCal;
+                customCalController.clear();
+                Navigator.pop(context); // Dismiss the dialog
+              },
+              child: const Text('Confirm'),
+            ),
+          ],
+        );
+      },
     );
   }
 }
