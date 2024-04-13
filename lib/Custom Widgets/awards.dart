@@ -27,56 +27,43 @@ class _AwardsState extends State<Awards> {
   }
 }
 
-String findMedal(String category, int value) {
+String getMedal(String category, double cal) {
   
-  int increment = 0;
-
-  if (category == "Calories") { // Every 10 Calories burned, increases Metal
-    increment = 10;
-  }
-  else if (category == "Lost") { // Every 10 lbs lost, increment Metal
-    increment = 5;
-  }
-  else if (category == "Streak") { // every 7 days, increment Metal
-    increment = 7;
-  }
-  else {
-    increment = 0;
-  }
-
+  int increment = 200;
 
   String medal = "undefined";
-  if(value > (1 * increment)) {
-    medal = "BronzeI";
+
+  if(cal > (1 * increment)) {
+    medal = "assets/images/BRONZEMedal.png";
   }
-  else if(value > (2 * increment)) {
-    medal = "BronzeII";
+  else if(cal > (2 * increment)) {
+    medal = "assets/images/BRONZEMedal.png";
   }
-  else if(value > (3 * increment)) {
-    medal = "BronzeIII";
+  else if(cal > (3 * increment)) {
+    medal = "assets/images/BRONZEMedal.png";
   }
-  else if(value > (4 * increment)) {
-    medal = "SilverI";
+  else if(cal > (4 * increment)) {
+    medal = "assets/images/SILVERMedal.png";
   }
-  else if(value > (5 * increment)) {
-    medal = "SilverII";
+  else if(cal > (5 * increment)) {
+    medal = "assets/images/SILVERMedal.png";
   }
-  else if(value > (6 * increment)) {
-    medal = "SilverIII";
+  else if(cal > (6 * increment)) {
+    medal = "assets/images/SILVERMedal.png";
   }
-  else if(value > (7 * increment)) {
-    medal = "GoldI";
+  else if(cal > (7 * increment)) {
+    medal = "assets/images/GOLDMedal.png";
   }
-  else if(value > (8 * increment)) {
-    medal = "GoldII";
+  else if(cal > (8 * increment)) {
+    medal = "assets/images/GOLDMedal.png";
   }
-  else if(value > (9 * increment)) {
-    medal = "GoldIII";
+  else if(cal > (9 * increment)) {
+    medal = "assets/images/GOLDMedal.png";
   }
-  else if(value > (10 * increment)) {
-    medal = "Platinum";
+  else if(cal > (10 * increment)) {
+    medal = "assets/images/PLATINUMMedal.png";
     int num = 0;
-    for(int i = 1; value > 100; i++){
+    for(int i = 1; cal > 100; i++){
       num++;
       medal = medal + num.toString();
     }
