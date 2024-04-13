@@ -33,12 +33,12 @@ class _Page4State extends State<Page4> {
             Expanded(
               child: ListView(
                 children: <Widget>[
-                  _buildTipItem("1. Invest and buy a digital scale to weight food"),
-                  _buildTipItem("2. Measure your food with mass in mind and not volume"),
+                  _buildTipItem("1. Purchase a digital scale to weigh food"),
+                  _buildTipItem("2. Measure your food in mass, not volume"),
                   _buildTipItem("3. Weigh your food before cooking it"),
                   _buildTipItem("4. Be sure to track your calories even if you go over/under your limit"),
-                  _buildTipItem("5. Keep in mind and track sauces they have more calories than you believe"),
-                  _buildTipItem("6. Take into account how much you worked out and eat accordingly"),
+                  _buildTipItem("5. Make sure to track sauces as they have more calories than you would think"),
+                  _buildTipItem("6. Take into account how much you exercise, and eat accordingly"),
                 ],
               ),
             ),
