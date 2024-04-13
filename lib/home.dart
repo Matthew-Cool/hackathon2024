@@ -3,13 +3,17 @@ import 'package:hackathon_app/Custom%20Widgets/caloriebar.dart';
 import 'package:hackathon_app/page5.dart';
 
 class Home extends StatefulWidget {
-  const Home({super.key});
+  final String savedData;
+  const Home({super.key, required this.savedData});
 
   @override
-  State<Home> createState() => _Page2State();
+  State<Home> createState() => _Page2State(savedName: savedData);
 }
 
 class _Page2State extends State<Home> {
+  final String savedName;
+  _Page2State({Key? key, required this.savedName});
+  
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -25,10 +29,13 @@ class _Page2State extends State<Home> {
               );
             }),
       ),
-      child: const Column(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [CalorieBar()],
+        children: [
+          Text("Welcome, $savedName"),
+          const CalorieBar(),
+        ],
       ),
     );
   }
