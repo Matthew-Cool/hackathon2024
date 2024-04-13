@@ -2,15 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:hackathon_app/food.dart';
 
 class FoodItem extends StatefulWidget {
-  const FoodItem({super.key, required this.food});
+  const FoodItem({super.key, required this.food, required this.cal});
 
   final String food;
+  final int cal;
 
   @override
   State<FoodItem> createState() => _FoodItemState();
 }
 
-class _FoodItemState extends State<FoodItem> {
+class _FoodItemState extends State<FoodItem> {  
   @override
   Widget build(BuildContext context) {
     return CupertinoButton(
