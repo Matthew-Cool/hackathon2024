@@ -15,12 +15,9 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   cupertino_icons: ^1.0.0
-<<<<<<< HEAD
-=======
   flutter_barcode_scanner: ^2.0.0
   shared_preferences: ^2.0.6
   restart_app: ^1.2.1
->>>>>>> c43ffa2907175950dcd95e0e5b94114bd23c7b55
 
 dev_dependencies:
   flutter_test:
