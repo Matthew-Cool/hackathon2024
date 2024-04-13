@@ -54,6 +54,7 @@ class _Page2State extends State<Home> {
             Container(padding: EdgeInsets.only(top:10), child: Text(style: const TextStyle(fontSize: 15), "Calories Burned: $g_burned Calories")),
             Container(padding: EdgeInsets.only(top:10), child: Text(style: const TextStyle(fontSize: 15), "Calories Gained: $g_gained Calories")),
             Container(padding: EdgeInsets.only(top: 25) ,child: Text(style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),"Welcome $savedName!")),
+            SizedBox(height: 10),
             const CalorieBar(),
             
           ],
