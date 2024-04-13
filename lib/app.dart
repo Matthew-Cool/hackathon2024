@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hackathon_app/page1.dart';
-import 'package:hackathon_app/page2.dart';
+import 'package:hackathon_app/home.dart';
 import 'package:hackathon_app/page3.dart';
 
 class PageScaffoldCustom extends StatelessWidget {

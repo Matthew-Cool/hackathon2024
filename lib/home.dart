@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:hackathon_app/caloriebar.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
@@ -7,8 +8,10 @@ class Page2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(),
-      child: Center(
-        child: Text("Page2"),
+      child: Column(
+        children: [
+          CalorieBar()
+        ],
       ),
     );
   }
