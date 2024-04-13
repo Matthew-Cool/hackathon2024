@@ -22,6 +22,7 @@ class _FoodItemState extends State<FoodItem> {
       padding: const EdgeInsets.all(5),
       onPressed: () {
         g_calorie += widget.calories;
+        g_gained += widget.calories;
         //setState(() => _isExpanded = !_isExpanded);
       },
       child: Container(
