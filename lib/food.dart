@@ -25,7 +25,7 @@ class _FoodState extends State<Food> {
           ),
         ),
         trailing: CupertinoButton(
-        child: const Icon(CupertinoIcons.forward),
+        child: const Icon(CupertinoIcons.list_number),
         onPressed: () {
           Navigator.push(
             context,
