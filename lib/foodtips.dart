@@ -38,7 +38,7 @@ class _Page4State extends State<Page4> {
                   _buildTipItem("3. Weigh your food before cooking it"),
                   _buildTipItem("4. Be sure to track your calories even if you go over/under your limit"),
                   _buildTipItem("5. Keep in mind and track sauces they have more calories than you believe"),
-                  _buildTipItem("6. Take into account how much you worked out and eat accoridngly"),
+                  _buildTipItem("6. Take into account how much you worked out and eat accordingly"),
                 ],
               ),
             ),
