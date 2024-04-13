@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:hackathon_app/food.dart';
 import 'package:hackathon_app/home.dart';
-import 'package:hackathon_app/page3.dart';
+import 'package:hackathon_app/fitness.dart';
 
 class PageScaffoldCustom extends StatelessWidget {
   const PageScaffoldCustom({Key? key}) : super(key: key);
@@ -12,10 +13,13 @@ class PageScaffoldCustom extends StatelessWidget {
 
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
+        currentIndex: 1,
         items: const [
           BottomNavigationBarItem(
             label: "Food",
-            icon: Icon(CupertinoIcons.circle),
+            icon: Icon(
+              Icons.restaurant,
+            ),
           ),
           BottomNavigationBarItem(
             label: "Home",
@@ -23,23 +27,22 @@ class PageScaffoldCustom extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             label: "Fitness",
-            icon: Icon(CupertinoIcons.circle),
+            icon: Icon(
+              Icons.fitness_center,
+            ),
           )
         ],
       ),
       tabBuilder: (context, index) {
-        if (index == 0) {
-          return CupertinoTabView(
-            builder: (context) => const Page1(),
-          );
-        } else if (index == 1) {
-          return CupertinoTabView(
-            builder: (context) => const Page2(),
-          );
-        } else {
-          return CupertinoTabView(
-            builder: (context) => const Page3(),
-          );
+        switch (index) {
+          case 0:
+            return Food();
+          case 1:
+            return Home();
+          case 2:
+            return Fitness();
+          default:
+            return Home();
         }
       },
     );

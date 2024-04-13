@@ -11,7 +11,9 @@ class _CalorieBarState extends State<CalorieBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("Hello world"),
+      child: Center(
+        child: Text("Hello"),
+      ),
     );
   }
 }

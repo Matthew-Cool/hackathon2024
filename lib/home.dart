@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:hackathon_app/Custom%20Widgets/caloriebar.dart';
 import 'package:hackathon_app/page5.dart';
 
-class Page2 extends StatefulWidget {
-  const Page2({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<Page2> createState() => _Page2State();
+  State<Home> createState() => _Page2State();
 }
 
-class _Page2State extends State<Page2> {
+class _Page2State extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -26,6 +26,8 @@ class _Page2State extends State<Page2> {
             }),
       ),
       child: const Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [CalorieBar()],
       ),
     );
