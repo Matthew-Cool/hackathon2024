@@ -58,7 +58,7 @@ class _FoodState extends State<Food> {
                   children: [
                     for (var foodItem in foodItems)
                       if (foodItem.food.toLowerCase().contains(searchText.toLowerCase()))
-                        FoodItemData(food: foodItem.food, calories: foodItem.calories),
+                        FoodItem(food: foodItem.food, calories: foodItem.calories),
                   ],
                 ),
               ),
