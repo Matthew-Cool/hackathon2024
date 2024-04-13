@@ -26,6 +26,8 @@ class _Page2State extends State<Page2> {
             }),
       ),
       child: const Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [CalorieBar()],
       ),
     );
