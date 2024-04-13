@@ -14,7 +14,7 @@ class _Page2State extends State<Home> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        leading: CupertinoButton(
+        trailing: CupertinoButton(
             child: const Icon(CupertinoIcons.forward),
             onPressed: () {
               Navigator.push(
@@ -26,9 +26,11 @@ class _Page2State extends State<Home> {
             }),
       ),
       child: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [CalorieBar()],
+        children: [
+          CalorieBar(),
+        ],
       ),
     );
   }

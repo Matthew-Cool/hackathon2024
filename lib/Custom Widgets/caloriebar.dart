@@ -11,8 +11,17 @@ class _CalorieBarState extends State<CalorieBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 120),
+      width: 80,
+      height: 40,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(
+          Radius.circular(3.0),
+        ),
+        border: Border.all(color: Color.fromARGB(243, 235, 235, 235), width: 4),
+      ),
       child: Center(
-        child: Text("Hello"),
+        child: Text("calories"),
       ),
     );
   }
