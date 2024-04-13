@@ -29,12 +29,16 @@ class PageScaffoldCustom extends StatelessWidget {
       ),
       tabBuilder: (context, index) {
         if (index == 0) {
-          return CupertinoTabView(builder: (context) => Page1());
+          return CupertinoTabView(
+            builder: (context) => const Page1(),
+          );
         } else if (index == 1) {
-          return Page2();
+          return CupertinoTabView(
+            builder: (context) => const Page2(),
+          );
         } else {
           return CupertinoTabView(
-            builder: (context) => Page3(),
+            builder: (context) => const Page3(),
           );
         }
       },
