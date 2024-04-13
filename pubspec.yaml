@@ -37,7 +37,8 @@ flutter:
     # Add assets from the images directory to the application.
     - assets/images/
 
+#having issues, maybe it works on apple? idk i'll fix later
 flutter_launcher_icons:
-  andriod: "launcher_icon"
-  ios: ture
-  image_path: "assets/images/flutter_logo.png"
+  andriod: "assets/images/mainAppIcon.png"
+  ios: true
+  image_path: "assets/images/mainAppIcon.png"

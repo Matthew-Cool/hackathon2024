@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:hackathon_app/Custom%20Widgets/caloriebar.dart';
 import 'package:hackathon_app/page5.dart';
 
@@ -19,6 +20,12 @@ class _Page2State extends State<Home> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
+        middle: Container(
+          padding: const EdgeInsets.all(5),
+          child: const Image(
+            image: AssetImage('assets/images/appBarIcon.png'),
+          ),
+        ),
         trailing: CupertinoButton(
             child: const Icon(CupertinoIcons.forward),
             onPressed: () {
