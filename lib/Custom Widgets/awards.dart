@@ -27,7 +27,7 @@ class _AwardsState extends State<Awards> {
   }
 }
 
-String findMetal(String category, int value) {
+String findMedal(String category, int value) {
   
   int increment = 0;
 
