@@ -19,7 +19,9 @@ class _WorkoutState extends State<Workout> {
   Widget build(BuildContext context) {
     return CupertinoButton(
       padding: const EdgeInsets.all(5),
-      onPressed: () {g_calorie -= widget.estimatedCalBurned;
+      onPressed: () {
+      g_calorie -= widget.estimatedCalBurned;
+      g_burned += widget.estimatedCalBurned;
       setState(() => _isExpanded = !_isExpanded);},
       child: Container(
         padding: const EdgeInsets.all(5),
