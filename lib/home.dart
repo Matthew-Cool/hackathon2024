@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/Custom%20Widgets/caloriebar.dart';
+import 'package:hackathon_app/Custom%20Widgets/progress.dart';
 import 'package:hackathon_app/page5.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class Home extends StatefulWidget {
   final String savedData;
@@ -42,6 +44,7 @@ class _Page2State extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Container(padding: EdgeInsets.only(top: 160), child: ProgressBar()),
             Container(padding: EdgeInsets.only(top: 120) ,child: Text(style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),"Welcome, $savedName")),
             const CalorieBar(),
           ],

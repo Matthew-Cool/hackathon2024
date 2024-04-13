@@ -58,7 +58,7 @@ class _FitnessAppState extends State<FitnessApp> {
       theme: const CupertinoThemeData( //this is default, but can be overrule the theme by change 'color' parameters
         applyThemeToAll: true,
         barBackgroundColor: CupertinoColors.secondaryLabel,
-        primaryColor: CupertinoColors.activeBlue,
+        primaryColor: Color.fromARGB(255, 206, 108, 9),
         scaffoldBackgroundColor: CupertinoColors.darkBackgroundGray,
         textTheme: CupertinoTextThemeData(
           textStyle: TextStyle(
