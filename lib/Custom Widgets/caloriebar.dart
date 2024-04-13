@@ -22,7 +22,7 @@ class _CalorieBarState extends State<CalorieBar> {
         border: Border.all(color: Color.fromARGB(243, 235, 235, 235), width: 4),
       ),
       child: const Center(
-        child: Text(style: const TextStyle(fontSize: 45, color: Color.fromARGB(255, 211, 91, 16)), "CAL0RIE C0ACH"),
+        child: Text(style: const TextStyle(fontSize: 40, color: Color.fromARGB(255, 211, 91, 16)), "CAL0RIE C0ACH"),
       ),
     );
   }

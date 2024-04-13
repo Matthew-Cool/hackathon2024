@@ -56,7 +56,18 @@ class _Page2State extends State<Home> {
             Container(padding: EdgeInsets.only(top: 25) ,child: Text(style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),"Welcome $savedName!")),
             SizedBox(height: 10),
             const CalorieBar(),
-            
+            CupertinoButton(onPressed: () {
+              if (g_burned > 500.0)
+              {
+                g_days++;
+                g_counter++;
+              }
+              g_calorie = 0.0;
+              g_goal = 2000.0;
+              g_burned = 0.0;
+              g_gained = 0.0;
+            },
+            child: Text(style: const TextStyle(fontSize: 20), "Next Day?"),)
           ],
         ),
       ),
