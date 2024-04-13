@@ -111,7 +111,11 @@ class _FoodState extends State<Food> {
   }
 }
 
-List<FoodItemData> foodItems = [
+
+
+void main(){
+
+  List<FoodItemData> foodItems = [
   FoodItemData(food: "Chicken Breast", calories: 165.0),
   FoodItemData(food: "Salmon Fillet", calories: 206.0),
   FoodItemData(food: "Broccoli", calories: 55.0),
@@ -201,7 +205,46 @@ List<FoodItemData> foodItems = [
   FoodItemData(food: "Carrot Cake", calories: 380.0),
   FoodItemData(food: "Banana Bread", calories: 230.0),
   FoodItemData(food: "Pumpkin Pie", calories: 320.0),
+  FoodItemData(food: "Spaghetti", calories: 220.0),
+  FoodItemData(food: "Carbonara", calories: 420.0),
+  FoodItemData(food: "Macaroni and Cheese", calories: 350.0),
+  FoodItemData(food: "Meatloaf", calories: 320.0),
+  FoodItemData(food: "Pot Roast", calories: 450.0),
+  FoodItemData(food: "Beef Stew", calories: 280.0),
+  FoodItemData(food: "Chicken Alfredo", calories: 400.0),
+  FoodItemData(food: "Chicken Parmesan", calories: 380.0),
+  FoodItemData(food: "Chicken Curry", calories: 300.0),
+  FoodItemData(food: "Fish Tacos", calories: 240.0),
+  FoodItemData(food: "Fish and Chips", calories: 600.0),
+  FoodItemData(food: "Shrimp Fried Rice", calories: 370.0),
+  FoodItemData(food: "Lobster Roll", calories: 450.0),
+  FoodItemData(food: "Crab Legs", calories: 290.0),
+  FoodItemData(food: "Clam Bake", calories: 400.0),
+  FoodItemData(food: "Scallops", calories: 220.0),
+  FoodItemData(food: "Beef Tacos", calories: 280.0),
+  FoodItemData(food: "Pork Carnitas", calories: 320.0),
+  FoodItemData(food: "Enchiladas", calories: 350.0),
+  FoodItemData(food: "Chimichangas", calories: 380.0),
+  FoodItemData(food: "Ceviche", calories: 200.0),
+  FoodItemData(food: "Tostadas", calories: 250.0),
+  FoodItemData(food: "Tamale", calories: 260.0),
+  FoodItemData(food: "Quesadilla", calories: 350.0),
+  FoodItemData(food: "Huevos Rancheros", calories: 300.0),
+  FoodItemData(food: "Fajitas", calories: 400.0),
+  FoodItemData(food: "Churros", calories: 200.0),
+  FoodItemData(food: "Flan", calories: 250.0),
+  FoodItemData(food: "Choco Taco", calories: 300.0),
+  FoodItemData(food: "Sushi Roll", calories: 350.0),
+  FoodItemData(food: "Sashimi", calories: 120.0),
+  FoodItemData(food: "Ramen", calories: 380.0),
+  FoodItemData(food: "Pho", calories: 450.0),
+  FoodItemData(food: "Bibimbap", calories: 500.0),
+  FoodItemData(food: "Kimchi", calories: 30.0),
+  FoodItemData(food: "Bulgogi", calories: 350.0),
 ];
+  
+}
+
 
 class FoodItemData {
   final String food;
