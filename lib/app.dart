@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/food.dart';
 import 'package:hackathon_app/home.dart';
-import 'package:hackathon_app/page3.dart';
+import 'package:hackathon_app/fitness.dart';
 
 
 class PageScaffoldCustom extends StatelessWidget {
