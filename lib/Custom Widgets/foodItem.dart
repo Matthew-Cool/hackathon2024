@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:hackathon_app/food.dart';
 
 class FoodItem extends StatefulWidget {
-  const FoodItem({super.key, required this.food, required this.cal});
+  const FoodItem({super.key, required this.food, required this.calories});
 
   final String food;
-  final int cal;
+  final double calories;
 
   @override
   State<FoodItem> createState() => _FoodItemState();
