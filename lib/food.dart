@@ -112,9 +112,6 @@ class _FoodState extends State<Food> {
 }
 
 
-
-void main(){
-
   List<FoodItemData> foodItems = [
   FoodItemData(food: "Chicken Breast", calories: 165.0),
   FoodItemData(food: "Salmon Fillet", calories: 206.0),
@@ -243,9 +240,6 @@ void main(){
   FoodItemData(food: "Bulgogi", calories: 350.0),
 ];
   
-}
-
-
 class FoodItemData {
   final String food;
   final double calories;
