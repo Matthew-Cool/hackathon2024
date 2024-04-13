@@ -10,14 +10,6 @@ class Food extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(), //nav bar at the top of screen
-<<<<<<< HEAD
-      child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            FoodItem(food: "Macaroni and Cheese"),
-            FoodItem(food: "Mashed Potatoes")
-          ],
-=======
       child: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -198,8 +190,8 @@ class Food extends StatelessWidget {
               SizedBox(height: 100,),
             ],
           ),
->>>>>>> 1ed3776f46750f2401b4cc542a3a6f07f265a7ea
         ),
+      )
     );
   }
 }
