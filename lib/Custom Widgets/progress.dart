@@ -27,7 +27,9 @@ class _ProgressBarState extends State<ProgressBar> {
     }
     else if (deci_val < 0.0)
     {
-      per_val = deci_val * 100;
+      hyper_deci = deci_val;
+      deci_val = 0.0;
+      per_val = hyper_deci * 100;
 
       limit_color = true;
     }
