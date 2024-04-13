@@ -1,10 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hackathon_app/Custom%20Widgets/foodItem.dart';
 
-class Food extends StatelessWidget {
+class Food extends StatefulWidget {
   const Food({
     Key? key,
   }) : super(key: key);
+
+  @override
+  _FoodState createState() => _FoodState();
+}
+
+class _FoodState extends State<Food> {
+  String searchText = '';
 
   @override
   Widget build(BuildContext context) {

@@ -47,6 +47,7 @@ class _Page2State extends State<Home> {
             Container(padding: EdgeInsets.only(top: 160), child: ProgressBar()),
             Container(padding: EdgeInsets.only(top: 120) ,child: Text(style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),"Welcome, $savedName")),
             const CalorieBar(),
+            
           ],
         ),
       ),
