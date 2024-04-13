@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hackathon_app/Custom%20Widgets/foodItem.dart';
+import 'package:hackathon_app/foodtips.dart';
 
 class Food extends StatefulWidget {
   const Food({
@@ -22,6 +23,18 @@ class _FoodState extends State<Food> {
           child: const Image(
             image: AssetImage('assets/images/appBarIcon.png'),
           ),
+        ),
+        trailing: CupertinoButton(
+        child: const Icon(CupertinoIcons.forward),
+        onPressed: () {
+          Navigator.push(
+            context,
+            CupertinoPageRoute(
+              builder: (context) => const Page4(),
+            ),
+          );
+        },
+        
         ),
       ), //nav bar at the top of screen
       child: Center(
