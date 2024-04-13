@@ -6,6 +6,9 @@ import 'appLayout.dart';
 // Width: MediaQuery.of(context).size.width
 // Height: MediaQuery.of(context).size.height
 
+double g_calorie = 0.0;
+double g_goal = 2000.0;
+
 void main() async {
   // Run the app and pass in the SettingsController. The app listens to the
   // SettingsController for changes, then passes it further down to the
