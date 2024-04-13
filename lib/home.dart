@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
 import 'package:hackathon_app/Custom%20Widgets/caloriebar.dart';
 import 'package:hackathon_app/page5.dart';
 
@@ -13,7 +14,7 @@ class Home extends StatefulWidget {
 class _Page2State extends State<Home> {
   final String savedName;
   _Page2State({Key? key, required this.savedName});
-  
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -29,13 +30,15 @@ class _Page2State extends State<Home> {
               );
             }),
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text("Welcome, $savedName"),
-          const CalorieBar(),
-        ],
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(padding: EdgeInsets.only(top: 120) ,child: Text(style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),"Welcome, $savedName")),
+            const CalorieBar(),
+          ],
+        ),
       ),
     );
   }

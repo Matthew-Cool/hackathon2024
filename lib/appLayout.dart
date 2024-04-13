@@ -36,6 +36,7 @@ class _FitnessAppState extends State<FitnessApp> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('data', _controller.text);
   }
+  
   @override
   Widget build(BuildContext context) {
 

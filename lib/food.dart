@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:hackathon_app/Custom%20Widgets/foodItem.dart';
 
 class Food extends StatelessWidget {
   const Food({
@@ -10,7 +11,13 @@ class Food extends StatelessWidget {
     return const CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(), //nav bar at the top of screen
       child: Center(
-        child: Text("Food"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FoodItem(food: "Macaroni and Cheese"),
+            FoodItem(food: "Mashed Potatoes")
+          ],
+        ),
       ), //text in the middle of screen
     );
   }
