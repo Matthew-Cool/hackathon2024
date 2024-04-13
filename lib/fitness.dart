@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hackathon_app/page4.dart';
 
-class Page3 extends StatefulWidget {
-  const Page3({super.key});
+class Fitness extends StatefulWidget {
+  const Fitness({super.key});
 
   @override
-  State<Page3> createState() => _Page3State();
+  State<Fitness> createState() => _Page3State();
 }
 
-class _Page3State extends State<Page3> {
+class _Page3State extends State<Fitness> {
   int counter = 0;
 
   @override
@@ -28,7 +28,7 @@ class _Page3State extends State<Page3> {
         ),
       ),
       child: const Center(
-        child: Text("Page3"),
+        child: Text("Fitness"),
       ),
     );
   }
