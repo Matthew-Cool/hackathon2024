@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hackathon_app/custom%20Widgets/workouts.dart';
+import 'package:hackathon_app/main.dart';
 
 class Fitness extends StatefulWidget {
   const Fitness({
@@ -11,12 +12,19 @@ class Fitness extends StatefulWidget {
 }
 
 class _FitnessState extends State<Fitness> {
+  TextEditingController customCalController = TextEditingController();
   String searchText = '';
 
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
+        leading: CupertinoButton(
+          child: const Icon(CupertinoIcons.add),
+          onPressed: () {
+            showCustomCalDialog(context);
+          },
+        ),
         middle: Container(
           padding: const EdgeInsets.all(5),
           child: const Image(
@@ -54,6 +62,40 @@ class _FitnessState extends State<Fitness> {
           ],
         ),
       )
+    );
+  }
+
+  
+  Future<void> showCustomCalDialog(BuildContext context) async {
+    return showCupertinoDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return CupertinoAlertDialog(
+          title: const Text('Add Custom Amount of Calories'),
+          content: Column(
+            children: [
+              const Text('Enter the calorie amount:'),
+              CupertinoTextField(
+                controller: customCalController,
+                keyboardType: TextInputType.numberWithOptions(decimal: true),
+                decoration: BoxDecoration(color: CupertinoColors.systemGrey)
+              ),
+            ],
+          ),
+          actions: <Widget>[
+            CupertinoButton(
+              onPressed: () {
+                double customCal = double.tryParse(customCalController.text) ?? 0.0;
+                g_calorie -= customCal;
+                g_burned += customCal;
+                customCalController.clear();
+                Navigator.pop(context); // Dismiss the dialog
+              },
+              child: const Text('Confirm'),
+            ),
+          ],
+        );
+      },
     );
   }
 }
