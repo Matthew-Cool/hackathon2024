@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/main.dart';
 
-
+String medal = "assets/images/DEFAULTMedal.png";
 
 class Awards extends StatefulWidget {
   const Awards({super.key});
@@ -34,6 +34,7 @@ void getPoints(bool day, int points) {
   }
   else {
     g_totalPoints = 0;
+    day = true;
   }  
 }
 
@@ -42,7 +43,7 @@ String getMedal() {
   
   int increment = 200;
 
-  String medal = "undefined";
+  String medal = "assets/images/DEFAULTMedal.png";
 
   if(g_totalPoints > (1 * increment)) {
     medal = "assets/images/BRONZEMedal.png";

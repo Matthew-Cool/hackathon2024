@@ -26,7 +26,7 @@ class Page5 extends StatelessWidget {
             children: [
               Container(padding: EdgeInsets.only(top: 200), child: Text("Calories", style: TextStyle(fontSize: 20))),
               Image(height: 440, width: 500, fit: BoxFit.fill,
-                image: AssetImage('assets/images/BRONZEMedal.png'),),
+                image: AssetImage(medal),),
               Container(padding: EdgeInsets.only(top: 20), child: Text("1", style: TextStyle(fontSize: 20))),
             ]
           
