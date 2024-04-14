@@ -21,8 +21,8 @@ class _CalorieBarState extends State<CalorieBar> {
         ),
         border: Border.all(color: Color.fromARGB(243, 235, 235, 235), width: 4),
       ),
-      child: Center(
-        child: Text(style: TextStyle(fontSize: (MediaQuery.of(context).size.width *.1)*1, color: Color.fromARGB(255, 211, 91, 16)), "CAL0RIE C0ACH"),
+      child: const Center(
+        child: Text(style: const TextStyle(fontSize: 40, color: Color.fromARGB(255, 211, 91, 16)), "CAL0RIE C0ACH"),
       ),
     );
   }
